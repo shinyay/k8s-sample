@@ -1,3 +1,6 @@
 #!/usr/bin/env fish
 
-minikube start --vm-driver=hyperkit --cpus 4 --memory 8192
+minikube start --memory=8192 --cpus=4  \
+                --kubernetes-version=v1.10.0 \
+                --vm-driver=hyperkit \
+                --bootstrapper=kubeadm
